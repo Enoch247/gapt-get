@@ -1,0 +1,20 @@
+#! /bin/sh
+#*******************************************************************************
+# Written by: Joshua DeWeese(josh.deweese@gmail.com)
+# please catch and release
+#-------------------------------------------------------------------------------
+#
+# index, package, source files go here:
+# /var/lib/apt/lists/
+#
+# .deb files go here:
+# /var/cache/apt/archives/
+#
+#*******************************************************************************
+
+# copy .deb files to apt cache location
+cp *.deb /var/cache/apt/archives/
+
+# copy index, package, and source files to their final location
+cp `apt-get -qq --print-uris update | awk '{print $2}'` /var/lib/apt/lists/
+

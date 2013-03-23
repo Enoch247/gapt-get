@@ -1,0 +1,15 @@
+#! /bin/sh
+#*******************************************************************************
+# Written by: Joshua DeWeese(josh.deweese@gmail.com)
+# please catch and release
+#*******************************************************************************
+
+echo "
+1.) gapt-get update/upgrade/install [pkgname] > get.sh
+1.) gapt-html update/upgrade/install [pkgname] > get.html
+2.) ./get.sh (in an empty dir on internet connected machine)
+3.) gapt-unzip
+4.) gapt-cp
+5.) apt-get update/upgrade/install [pkgname]
+"
+

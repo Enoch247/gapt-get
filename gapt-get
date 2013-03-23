@@ -1,0 +1,23 @@
+#! /bin/sh
+#*******************************************************************************
+# Written by: Joshua DeWeese(josh.deweese@gmail.com)
+# please catch and release
+#*******************************************************************************
+
+if test -z $1; then
+  echo $0": Please give at least one argument to pass on to apt-get!!!" 1>&2
+  exit 1
+fi
+
+# make a wget download script
+echo '#! /bin/sh'
+echo "# YOU SHOULD RUN THIS IN AN EMPTY DIR"
+echo "# `basename $0` $@"
+apt-get -qq --print-uris "$@" | awk \
+'{
+    if(/bz2/)
+        print "wget " $1 " -O " $2 ".bz2";
+    else
+        print "wget " $1 " -O " $2;
+}'
+
