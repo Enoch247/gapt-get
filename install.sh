@@ -5,6 +5,7 @@
 #*******************************************************************************
 
 PROJDIR=`dirname $0`
-PREFIX="$HOME/bin"
+#PREFIX="$HOME/bin"
+PREFIX="/usr/local/sbin"
 
 install $PROJDIR/gapt-* $PREFIX
