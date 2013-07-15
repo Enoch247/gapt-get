@@ -10,6 +10,6 @@ echo "
 2.) ./get.sh (in an empty dir on internet connected machine)
 3.) gapt-unzip
 4.) gapt-cp
-5.) apt-get update/upgrade/install [pkgname]
+5.) apt-get upgrade/install [pkgname]
 "
 
