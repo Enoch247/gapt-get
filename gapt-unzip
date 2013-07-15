@@ -5,13 +5,13 @@
 #*******************************************************************************
 
 # decompress index, package, and source files
-for file in *.bz2
+for file in `find -name "*.bz2"`
 do
-    bunzip2 -q $file
+    bunzip2 -f -q $file
 done
 
 # remove .bz2 sufix from index, package, and source files that are 0 bytes
-for file in *.bz2
+for file in `find -size 0 -name "*.bz2"`
 do
     mv $file `echo $file | sed s/.bz2//`
 done
