@@ -15,6 +15,7 @@
 # copy .deb files to apt cache location
 cp *.deb /var/cache/apt/archives/
 
+# TODO: only cp if they exsist so we don't produce errors
 # copy index, package, and source files to their final location
 cp `apt-get -qq --print-uris update | awk '{print $2}'` /var/lib/apt/lists/
 
