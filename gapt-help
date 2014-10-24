@@ -5,11 +5,19 @@
 #*******************************************************************************
 
 echo "
+using wget on internet machine...
 1.) gapt-get update/upgrade/install [pkgname] > get.sh
-1.) gapt-html update/upgrade/install [pkgname] > get.html
 2.) ./get.sh (in an empty dir on internet connected machine)
-3.) gapt-unzip
-4.) gapt-cp
+3.) gapt-unzip (run in dir downloads are saved in)
+4.) gapt-cp (run in dir downloads are saved in)
+5.) apt-get upgrade/install [pkgname]
+
+using a web browser on internet machine...
+1.) gapt-html update/upgrade/install [pkgname] > get.html
+2.) download links in get.html (save to empty dir)
+(note: make sure and save them as the name of the link, the browser may try to save them as the wrong name)
+3.) gapt-unzip (run in dir downloads are saved in)
+4.) gapt-cp (run in dir downloads are saved in)
 5.) apt-get upgrade/install [pkgname]
 "
 

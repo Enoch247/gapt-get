@@ -1,17 +1,19 @@
-A stop gap solution to using apt-get when you don’t have an internet connection handy.
+A stop gap solution to using apt-get when you don’t have an internet connection handy. Gapt-get is different from similar tools, because it does not require you to install or have any admin privlages on the internet connected machine. This is handy if your "internet" machine is a public machine at a library or a machine that is administered by an uncooperative IT department.
 
-if you have any machine connected to the internet with a browser installed, use as follows to install a package from the repo:
+TO USE: (from gapt-help)
 
-1.) gapt-html install PKGNAME > get.html
-2.) on internet connected machine open html file in browser and download all links (make sure and save them as the name of the link, the browser will try to save them as the wrong name)
-
-if you have a linux machine connected to the internet with wget installed, use as follows to install a package from the repo:
-
-1.) gapt-get install PKGNAME > get.sh
+using wget on internet machine...
+1.) gapt-get update/upgrade/install [pkgname] > get.sh
 2.) ./get.sh (in an empty dir on internet connected machine)
 3.) gapt-unzip (run in dir downloads are saved in)
 4.) gapt-cp (run in dir downloads are saved in)
-5.) apt-get install PKGNAME
+5.) apt-get upgrade/install [pkgname]
 
-instructions are the same for apt-get update and apt-get upgrade just without PKGNAME (obviously)
+using a web browser on internet machine...
+1.) gapt-html update/upgrade/install [pkgname] > get.html
+2.) download links in get.html (save to empty dir)
+(note: make sure and save them as the name of the link, the browser may try to save them as the wrong name)
+3.) gapt-unzip (run in dir downloads are saved in)
+4.) gapt-cp (run in dir downloads are saved in)
+5.) apt-get upgrade/install [pkgname]
 
